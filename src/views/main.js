@@ -1,12 +1,16 @@
 import React from "react";
 import Header from "../components/header";
 import MainBanner from "../components/mainBanner";
+import ActionSection from "../components/actionSection";
+import PlaceToViistGallery from "../components/placeVisitGallery";
 
 const Main = () => {
   return (
     <div>
       <Header></Header>
       <MainBanner />
+      <ActionSection />
+      <PlaceToViistGallery />
     </div>
   );
 };
