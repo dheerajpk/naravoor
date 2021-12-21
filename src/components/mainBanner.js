@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
   subHeader: {
     marginBottom: "30px",
-    color: "#2e9dff",
+    color: "#dddddd",
     fontSize: "40px",
     lineHeight: "25px",
     fontWeight: "300",

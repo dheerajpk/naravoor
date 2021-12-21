@@ -3,6 +3,8 @@ import Header from "../components/header";
 import MainBanner from "../components/mainBanner";
 import ActionSection from "../components/actionSection";
 import PlaceToViistGallery from "../components/placeVisitGallery";
+import FooterSection from "../components/footerSection";
+import UseFullServices from "../components/useFullService";
 
 const Main = () => {
   return (
@@ -11,6 +13,8 @@ const Main = () => {
       <MainBanner />
       <ActionSection />
       <PlaceToViistGallery />
+      <UseFullServices />
+      <FooterSection />
     </div>
   );
 };
