@@ -5,6 +5,7 @@ import ActionSection from "../components/actionSection";
 import PlaceToViistGallery from "../components/placeVisitGallery";
 import FooterSection from "../components/footerSection";
 import UseFullServices from "../components/useFullService";
+import NewsAndEvents from "../components/newsAndEvents";
 
 const Main = () => {
   return (
@@ -13,6 +14,7 @@ const Main = () => {
       <MainBanner />
       <ActionSection />
       <PlaceToViistGallery />
+      <NewsAndEvents />
       <UseFullServices />
       <FooterSection />
     </div>

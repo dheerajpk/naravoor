@@ -1,5 +1,4 @@
 import React from "react";
-import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import {
   Face,
@@ -33,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const UseFullServices = () => {
+const NewsAndEvents = () => {
   const styleClass = useStyles();
 
   function getChipIcon(iconType) {
@@ -52,10 +51,10 @@ const UseFullServices = () => {
   }
 
   return (
-    <Container sx={{ padding: "80px 10px", backgroundColor: "#fff" }}>
-      <h1 className={styleClass.header}>Services</h1>
+    <Container sx={{ padding: "80px 10px", backgroundColor: "#dddddd" }}>
+      <h1 className={styleClass.header}>Upcoming Events</h1>
       <span className={styleClass.subHeader}>
-        Find all your services around you
+        Latest announcements, news and upcoming events
       </span>
       <Stack
         direction="row"
@@ -63,20 +62,8 @@ const UseFullServices = () => {
         sx={{ marginTop: "40px" }}
         justifyContent="center"
         alignItems="center"
-      >
-        {getUseFullServicesTags().map((item) => (
-          <Chip
-            key={item.id}
-            icon={getChipIcon(item.icon)}
-            label={item.title}
-          />
-        ))}
-
-        {/* <Chip icon={<Face />} label="Libraies" />
-        <Chip icon={<Face />} label="Find services" />
-        <Chip icon={<Face />} label="Map" /> */}
-      </Stack>
+      ></Stack>
     </Container>
   );
 };
-export default UseFullServices;
+export default NewsAndEvents;

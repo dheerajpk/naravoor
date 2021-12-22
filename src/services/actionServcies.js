@@ -37,3 +37,32 @@ export const getPlaceToVisitGallery = () => {
     }
   ];
 };
+
+export const getUseFullServicesTags = () => {
+  return [
+    {
+      id: "news",
+      title: "News",
+      icon: "NEWS",
+      color: "#fff"
+    },
+    {
+      id: "library",
+      title: "Library",
+      icon: "LIBRARY",
+      color: "#fff"
+    },
+    {
+      id: "shops",
+      title: "Shops",
+      icon: "SHOPS",
+      color: "#fff"
+    },
+    {
+      id: "schools",
+      title: "Schools",
+      icon: "SCHOOLS",
+      color: "#fff"
+    }
+  ];
+};
