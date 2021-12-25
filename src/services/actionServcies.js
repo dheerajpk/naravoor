@@ -1,3 +1,4 @@
+import allserviceJson from "../data/allServices.json";
 export const getActionOptions = () => {
   return [
     {
@@ -109,4 +110,8 @@ export const getEvents = (type) => {
       contact: "+911234567890"
     }
   ].filter((x) => x.type === type);
+};
+
+export const getAllServicesData = () => {
+  return allserviceJson;
 };

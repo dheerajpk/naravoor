@@ -5,8 +5,10 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-import { Container, Chip } from "@mui/material";
+import { Container, Chip, Divider } from "@mui/material";
 import { getChipIcon } from "../helper/chipIcon";
+import ItemTemplate from "./servicesItems/itemTemplate";
+import { getAllServicesData } from "../services/actionServcies";
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -47,6 +49,8 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 const AllServicesList = ({ serviceName }) => {
   const [expanded, setExpanded] = React.useState("library");
 
+  const serviceData = getAllServicesData();
+
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
@@ -61,12 +65,12 @@ const AllServicesList = ({ serviceName }) => {
           <Chip icon={getChipIcon("LIBRARY")} label={"Library"} />
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
-            lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
+          {serviceData.library.map((x) => (
+            <>
+              <ItemTemplate item={x} />
+              <Divider sx={{ marginTop: "20px" }} />
+            </>
+          ))}
         </AccordionDetails>
       </Accordion>
       <Accordion
@@ -77,12 +81,12 @@ const AllServicesList = ({ serviceName }) => {
           <Chip icon={getChipIcon("SHOPS")} label={"Shops"} />
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
-            lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
+          {serviceData.shops.map((x) => (
+            <>
+              <ItemTemplate item={x} />
+              <Divider sx={{ marginTop: "20px" }} />
+            </>
+          ))}
         </AccordionDetails>
       </Accordion>
       <Accordion
@@ -93,12 +97,12 @@ const AllServicesList = ({ serviceName }) => {
           <Chip icon={getChipIcon("SCHOOLS")} label={"Schools"} />
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
-            lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
+          {serviceData.schools.map((x) => (
+            <>
+              <ItemTemplate item={x} />
+              <Divider sx={{ marginTop: "20px" }} />
+            </>
+          ))}
         </AccordionDetails>
       </Accordion>
       <Accordion expanded={expanded === "taxi"} onChange={handleChange("taxi")}>
@@ -106,12 +110,12 @@ const AllServicesList = ({ serviceName }) => {
           <Chip icon={getChipIcon("TAXI")} label={"Taxi"} />
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
-            lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
+          {serviceData.taxi.map((x) => (
+            <>
+              <ItemTemplate item={x} />
+              <Divider sx={{ marginTop: "20px" }} />
+            </>
+          ))}
         </AccordionDetails>
       </Accordion>
     </Container>

@@ -4,13 +4,15 @@
       "id": "lib1",
       "title": "South Naravoor vayanshala",
       "location": "naravoor mooriyad road",
-      "conactInfo": "+911234578789"
+      "contactInfo": "+911234578789",
+      "img": "../library.jpg"
     },
     {
       "id": "lib2",
       "title": "Naravoor vayanshala",
       "location": "naravoor mooriyad road",
-      "conactInfo": "+911234578789"
+      "contactInfo": "+911234578789",
+      "img": "../library.jpg"
     }
   ],
   "shops": [
@@ -18,13 +20,15 @@
       "id": "shp1",
       "title": "Vanshala",
       "location": "naravoor",
-      "conactInfo": "+911234578789"
+      "conactInfo": "+911234578789",
+      "img": "../shop1.jpg"
     },
     {
       "id": "shp1",
       "title": "Kootapedika",
       "location": "Roshan road",
-      "conactInfo": "+911234578789"
+      "conactInfo": "+911234578789",
+      "img": "../shop2.jpg"
     }
   ],
   "schools": [
@@ -32,7 +36,8 @@
       "id": "sch1",
       "title": "Naravoor LP school",
       "location": "South Naravoor",
-      "conactInfo": "+911234578789"
+      "conactInfo": "+911234578789",
+      "img": "../school.jpeg"
     }
   ],
   "taxi": [
