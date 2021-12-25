@@ -41,12 +41,6 @@ export const getPlaceToVisitGallery = () => {
 export const getUseFullServicesTags = () => {
   return [
     {
-      id: "news",
-      title: "News",
-      icon: "NEWS",
-      color: "#fff"
-    },
-    {
       id: "library",
       title: "Library",
       icon: "LIBRARY",
@@ -63,6 +57,56 @@ export const getUseFullServicesTags = () => {
       title: "Schools",
       icon: "SCHOOLS",
       color: "#fff"
+    },
+    {
+      id: "taxi",
+      title: "Taxi",
+      icon: "TAXI",
+      color: "#fff"
+    },
+    {
+      id: "electrican",
+      title: "Electrican & Plumber",
+      icon: "ELECTRICAN",
+      color: "#fff"
     }
   ];
+};
+
+export const getEvents = (type) => {
+  return [
+    {
+      id: "1",
+      type: "EVENT",
+      date: new Date(),
+      title: "Junior chess competion",
+      description: "Naravvor youth club conducting chess competion for juniors",
+      contact: "+911234567890"
+    },
+    {
+      id: "2",
+      type: "EVENT",
+      date: new Date(),
+      title: "Junior drawing competion",
+      description:
+        "Naravvor youth club conducting drawing competion for juniors",
+      contact: "+911234567890"
+    },
+    {
+      id: "3",
+      type: "NEWS",
+      date: new Date(),
+      title: "Annual library meeting",
+      description: "Naravvor youth club conducting annual library meeting",
+      contact: "+911234567890"
+    },
+    {
+      id: "4",
+      type: "NEWS",
+      date: new Date(),
+      title: "Naravoor school admission open",
+      description: "Naravoor LP school adimission soon starts",
+      contact: "+911234567890"
+    }
+  ].filter((x) => x.type === type);
 };

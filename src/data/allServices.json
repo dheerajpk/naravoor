@@ -1,0 +1,61 @@
+{
+  "library": [
+    {
+      "id": "lib1",
+      "title": "South Naravoor vayanshala",
+      "location": "naravoor mooriyad road",
+      "conactInfo": "+911234578789"
+    },
+    {
+      "id": "lib2",
+      "title": "Naravoor vayanshala",
+      "location": "naravoor mooriyad road",
+      "conactInfo": "+911234578789"
+    }
+  ],
+  "shops": [
+    {
+      "id": "shp1",
+      "title": "Vanshala",
+      "location": "naravoor",
+      "conactInfo": "+911234578789"
+    },
+    {
+      "id": "shp1",
+      "title": "Kootapedika",
+      "location": "Roshan road",
+      "conactInfo": "+911234578789"
+    }
+  ],
+  "schools": [
+    {
+      "id": "sch1",
+      "title": "Naravoor LP school",
+      "location": "South Naravoor",
+      "conactInfo": "+911234578789"
+    }
+  ],
+  "taxi": [
+    {
+      "id": "tx1",
+      "title": "Roshan auto driver",
+      "location": "South Naravoor",
+      "conactInfo": "+911234578789"
+    },
+    {
+      "id": "tx1",
+      "title": "Rajeevan auto driver",
+      "location": "South Naravoor",
+      "conactInfo": "+911234578789"
+    }
+  ],
+  "temple": [
+    {
+      "id": "tmp1",
+      "title": "Naravoor Sri Mahavishnu Temple",
+      "location": "Naravoor Sri Mahavishnu Temple Naravoor",
+      "conactInfo": "+911234578789",
+      "link": "https://www.naravoorsrimahavishnutemple.com/"
+    }
+  ]
+}

@@ -8,8 +8,20 @@ import {
   School
 } from "@mui/icons-material";
 import { makeStyles } from "@mui/styles";
-import { Paper, Grid, Container } from "@mui/material";
-import { getUseFullServicesTags } from "../services/actionServcies";
+import {
+  ListItem,
+  List,
+  Grid,
+  Container,
+  Avatar,
+  ListItemAvatar,
+  ListItemText,
+  Typography
+} from "@mui/material";
+import ImageIcon from "@mui/icons-material/Event";
+import CampaignIcon from "@mui/icons-material/Campaign";
+import { getUseFullServicesTags, getEvents } from "../services/actionServcies";
+import { getWeekDayName } from "../helper/dateHelper";
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -50,19 +62,56 @@ const NewsAndEvents = () => {
     }
   }
 
+  function getEventTemplate(item) {
+    return (
+      <ListItem key={item.id}>
+        <ListItemAvatar>
+          <Avatar>
+            {item.type === "EVENT" ? <ImageIcon /> : <CampaignIcon />}
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText
+          primary={item.title}
+          secondary={
+            <React.Fragment>
+              <Typography
+                sx={{ display: "inline" }}
+                component="span"
+                variant="body2"
+                color="text.primary"
+              >
+                {item.date.toDateString()}
+              </Typography>
+              {" - "}
+              {item.description}
+            </React.Fragment>
+          }
+        />
+      </ListItem>
+    );
+  }
+
   return (
     <Container sx={{ padding: "80px 10px", backgroundColor: "#dddddd" }}>
       <h1 className={styleClass.header}>Upcoming Events</h1>
       <span className={styleClass.subHeader}>
-        Latest announcements, news and upcoming events
+        Latest announcements, news and events
       </span>
       <Stack
         direction="row"
         spacing={1}
         sx={{ marginTop: "40px" }}
         justifyContent="center"
-        alignItems="center"
-      ></Stack>
+        alignItems="flex-start"
+      >
+        <List sx={{ width: "48%" }}>
+          {getEvents("EVENT").map((evnt) => getEventTemplate(evnt))}
+        </List>
+
+        <List sx={{ width: "48%" }}>
+          {getEvents("NEWS").map((evnt) => getEventTemplate(evnt))}
+        </List>
+      </Stack>
     </Container>
   );
 };

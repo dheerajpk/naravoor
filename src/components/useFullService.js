@@ -6,11 +6,14 @@ import {
   Newspaper,
   LibraryBooks,
   LocalGroceryStore,
-  School
+  School,
+  LocalTaxi,
+  Plumbing
 } from "@mui/icons-material";
 import { makeStyles } from "@mui/styles";
 import { Paper, Grid, Container } from "@mui/material";
 import { getUseFullServicesTags } from "../services/actionServcies";
+import AllServicesList from "./allServicesList";
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -46,6 +49,10 @@ const UseFullServices = () => {
         return <LocalGroceryStore />;
       case "SCHOOLS":
         return <School />;
+      case "TAXI":
+        return <LocalTaxi />;
+      case "ELECTRICAN":
+        return <Plumbing />;
       default:
         return <Face />;
     }
@@ -59,23 +66,23 @@ const UseFullServices = () => {
       </span>
       <Stack
         direction="row"
-        spacing={1}
+        spacing={2}
         sx={{ marginTop: "40px" }}
         justifyContent="center"
         alignItems="center"
+        flexWrap="wrap"
       >
         {getUseFullServicesTags().map((item) => (
           <Chip
+            sx={{ marginTop: "10px" }}
             key={item.id}
             icon={getChipIcon(item.icon)}
             label={item.title}
           />
         ))}
-
-        {/* <Chip icon={<Face />} label="Libraies" />
-        <Chip icon={<Face />} label="Find services" />
-        <Chip icon={<Face />} label="Map" /> */}
       </Stack>
+
+      <AllServicesList />
     </Container>
   );
 };
