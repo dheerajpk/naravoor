@@ -62,5 +62,19 @@
       "conactInfo": "+911234578789",
       "link": "https://www.naravoorsrimahavishnutemple.com/"
     }
+  ],
+  "electrician": [
+    {
+      "id": "elc1",
+      "title": "Vijeesh - Plumber & Electrician",
+      "location": "Naravoor",
+      "conactInfo": "+911234578789"
+    },
+    {
+      "id": "elc2",
+      "title": "Anil - Plumber",
+      "location": "Naravoor",
+      "conactInfo": "+911234578789"
+    }
   ]
 }

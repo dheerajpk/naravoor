@@ -38,7 +38,7 @@ const PlaceToViistGallery = () => {
         padding: "80px 10px"
       }}
     >
-      <h2 className={styleClass.header}>Places to visit</h2>
+      <h2 className={styleClass.header}>Top attractions</h2>
       <div className={styleClass.subHeader}>
         This is some text inside of a div block.
       </div>

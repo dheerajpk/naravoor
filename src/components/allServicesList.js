@@ -58,6 +58,7 @@ const AllServicesList = ({ serviceName }) => {
   return (
     <Container sx={{ marginTop: "20px" }}>
       <Accordion
+        TransitionProps={{ unmountOnExit: true }}
         expanded={expanded === "library"}
         onChange={handleChange("library")}
       >
@@ -74,6 +75,7 @@ const AllServicesList = ({ serviceName }) => {
         </AccordionDetails>
       </Accordion>
       <Accordion
+        TransitionProps={{ unmountOnExit: true }}
         expanded={expanded === "shops"}
         onChange={handleChange("shops")}
       >
@@ -90,6 +92,7 @@ const AllServicesList = ({ serviceName }) => {
         </AccordionDetails>
       </Accordion>
       <Accordion
+        TransitionProps={{ unmountOnExit: true }}
         expanded={expanded === "schools"}
         onChange={handleChange("schools")}
       >
@@ -105,12 +108,56 @@ const AllServicesList = ({ serviceName }) => {
           ))}
         </AccordionDetails>
       </Accordion>
-      <Accordion expanded={expanded === "taxi"} onChange={handleChange("taxi")}>
+      <Accordion
+        TransitionProps={{ unmountOnExit: true }}
+        expanded={expanded === "taxi"}
+        onChange={handleChange("taxi")}
+      >
         <AccordionSummary aria-controls="taxi-content" id="taxi-header">
           <Chip icon={getChipIcon("TAXI")} label={"Taxi"} />
         </AccordionSummary>
         <AccordionDetails>
           {serviceData.taxi.map((x) => (
+            <>
+              <ItemTemplate item={x} />
+              <Divider sx={{ marginTop: "20px" }} />
+            </>
+          ))}
+        </AccordionDetails>
+      </Accordion>
+      <Accordion
+        TransitionProps={{ unmountOnExit: true }}
+        expanded={expanded === "temple"}
+        onChange={handleChange("temple")}
+      >
+        <AccordionSummary aria-controls="temple-content" id="temple-header">
+          <Chip icon={getChipIcon("TEMPLE")} label={"Temple"} />
+        </AccordionSummary>
+        <AccordionDetails>
+          {serviceData.temple.map((x) => (
+            <>
+              <ItemTemplate item={x} />
+              <Divider sx={{ marginTop: "20px" }} />
+            </>
+          ))}
+        </AccordionDetails>
+      </Accordion>
+      <Accordion
+        TransitionProps={{ unmountOnExit: true }}
+        expanded={expanded === "electrician"}
+        onChange={handleChange("electrician")}
+      >
+        <AccordionSummary
+          aria-controls="electrician-content"
+          id="electrician-header"
+        >
+          <Chip
+            icon={getChipIcon("ELECTRICIAN")}
+            label={"Electrician & Plumper"}
+          />
+        </AccordionSummary>
+        <AccordionDetails>
+          {serviceData.electrician.map((x) => (
             <>
               <ItemTemplate item={x} />
               <Divider sx={{ marginTop: "20px" }} />

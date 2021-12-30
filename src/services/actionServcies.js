@@ -3,18 +3,24 @@ export const getActionOptions = () => {
   return [
     {
       id: "places",
-      name: "Places",
-      href: "#"
+      name: "Top Attractions",
+      href: "#",
+      description: "Our top attractions",
+      icon: "MAP"
     },
     {
-      id: "around",
-      name: "Around you",
-      href: "#"
+      id: "events",
+      name: "News & Events",
+      href: "#",
+      description: "News,events & announcement",
+      icon: "EVENTS"
     },
     {
       id: "services",
-      name: "Find services",
-      href: "#"
+      name: "Local Services",
+      href: "#",
+      description: "Scools, library, taxi, shops",
+      icon: "RADAR"
     }
   ];
 };
@@ -67,8 +73,8 @@ export const getUseFullServicesTags = () => {
     },
     {
       id: "electrican",
-      title: "Electrican & Plumber",
-      icon: "ELECTRICAN",
+      title: "Electrician & Plumber",
+      icon: "ELECTRICIAN",
       color: "#fff"
     }
   ];

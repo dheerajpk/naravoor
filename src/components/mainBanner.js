@@ -32,9 +32,8 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "30px",
     color: "#dddddd",
     fontSize: "40px",
-    lineHeight: "25px",
     fontWeight: "300",
-    letterSpacing: "3px",
+    letterSpacing: "2px",
     textTansform: "uppercase"
   }
 }));
@@ -51,7 +50,7 @@ const MainBanner = () => {
     >
       <h1 className={styleClass.header}>Naravoor</h1>
       <span className={styleClass.subHeader}>
-        We are welcome to our small village Narvoor
+        " The place of human in the rocks "
       </span>
     </Grid>
   );

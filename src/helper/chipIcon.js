@@ -6,10 +6,14 @@ import {
   LocalGroceryStore,
   School,
   LocalTaxi,
-  Plumbing
+  Plumbing,
+  TempleHindu,
+  Map,
+  Campaign,
+  Radar
 } from "@mui/icons-material";
 
-export function getChipIcon(iconType) {
+export function getChipIcon(iconType, props = {}) {
   switch (iconType) {
     case "NEWS":
       return <Newspaper />;
@@ -21,9 +25,17 @@ export function getChipIcon(iconType) {
       return <School />;
     case "TAXI":
       return <LocalTaxi />;
-    case "ELECTRICAN":
+    case "ELECTRICIAN":
       return <Plumbing />;
+    case "TEMPLE":
+      return <TempleHindu />;
+    case "MAP":
+      return <Map {...props} />;
+    case "EVENTS":
+      return <Campaign {...props} />;
+    case "RADAR":
+      return <Radar {...props} />;
     default:
-      return <Face />;
+      return <Face {...props} />;
   }
 }

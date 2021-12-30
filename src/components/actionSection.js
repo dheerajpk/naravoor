@@ -1,8 +1,9 @@
 import React from "react";
-import { Paper, Box, Container } from "@mui/material";
+import { Paper, Box, Container, Typography } from "@mui/material";
 import { getActionOptions } from "../services/actionServcies";
 import { makeStyles } from "@mui/styles";
-import MapIcon from "@mui/icons-material/Map";
+import { getChipIcon } from "../helper/chipIcon";
+
 const useStyles = makeStyles((theme) => ({
   header: {
     color: "#676770",
@@ -12,6 +13,13 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "uppercase"
   },
   subHeader: {
+    color: "#8e8e9c",
+    fontSize: "18px",
+    fontWeight: "300",
+    letterSpacing: "3px",
+    textTransform: "uppercase"
+  },
+  item: {
     color: "#8e8e9c",
     fontSize: "18px",
     fontWeight: "300",
@@ -28,10 +36,9 @@ const ActionSection = () => {
   const styleClass = useStyles();
   return (
     <Container sx={{ paddingTop: "80px", paddingBottom: "80px" }}>
-      <h2 className={styleClass.header}>what we do</h2>
-      <div className={styleClass.subHeader}>
-        This is some text inside of a div block.
-      </div>
+      <h2 className={styleClass.header}>getting around</h2>
+      <div className={styleClass.subHeader}>find everything about navavoor</div>
+
       <Box
         sx={{ display: "flex", marginTop: "50px", justifyContent: "center" }}
       >
@@ -41,19 +48,39 @@ const ActionSection = () => {
             sx={{
               "& > :not(style)": {
                 m: 1,
-                width: "200px",
-                height: "250px",
+                width: { lg: "200px", sm: "200px", xs: "calc(100vw / 3.4);" },
+                height: { lg: "250px", sm: "250px", xs: "200px" },
                 padding: "15px"
               }
             }}
           >
             <Paper elevation={3}>
               <div style={{ marginTop: "20px" }}>
-                <MapIcon
-                  sx={{ width: "98px", height: "98px", color: "#69b9ff" }}
-                />
-                <h3 className={styleClass.subHeader}>{x.name}</h3>
-                <p className={styleClass.p}> This service is about</p>
+                {getChipIcon(x.icon, {
+                  sx: {
+                    width: "50%",
+                    height: "50%",
+                    color: "#69b9ff"
+                  }
+                })}
+                {/* <h3 className={styleClass.item} sx={{ fontSize: "10px" }}>
+                  {x.name}
+                </h3> */}
+                <Typography
+                  variant="h3"
+                  component="h3"
+                  sx={{
+                    color: "#8e8e9c",
+
+                    fontSize: { lg: "18px", sm: "18px", xs: "14px" },
+                    fontWeight: "300",
+                    letterSpacing: { lg: "3px", sm: "3px", xs: "0px" },
+                    textTransform: "uppercase",
+                    mt: "18px"
+                  }}
+                >
+                  {x.name}
+                </Typography>
               </div>
             </Paper>
           </Box>
