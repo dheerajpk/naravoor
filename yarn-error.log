@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn add @mui/icons-material
+  /usr/local/bin/node /usr/local/bin/yarn add react-material-ui-carousel
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: EACCES: permission denied, mkdir '/Users/adhvik/Documents/Dheeraj/Work/GitHub/naravoor/naravoorapp/node_modules/@mui/icons-material'
+  Error: EACCES: permission denied, mkdir '/Users/adhvik/Documents/Dheeraj/Work/GitHub/naravoor/naravoorapp/node_modules/@emotion/is-prop-valid/node_modules'
 
 npm manifest: 
   {
@@ -24,6 +24,7 @@ npm manifest:
     "dependencies": {
       "@emotion/react": "^11.7.0",
       "@emotion/styled": "^11.6.0",
+      "@mui/icons-material": "^5.2.5",
       "@mui/material": "^5.2.3",
       "@mui/styles": "^5.2.3",
       "@testing-library/jest-dom": "^5.11.4",
@@ -1781,6 +1782,13 @@ Lockfile:
       clsx "^1.1.1"
       prop-types "^15.7.2"
       react-is "^17.0.2"
+  
+  "@mui/icons-material@^5.2.5":
+    version "5.2.5"
+    resolved "https://registry.yarnpkg.com/@mui/icons-material/-/icons-material-5.2.5.tgz#c6575430b565c023232147934c45775630a53f02"
+    integrity sha512-uQiUz+l0xy+2jExyKyU19MkMAR2F7bQFcsQ5hdqAtsB14Jw2zlmIAD55mV6f0NxKCut7Rx6cA3ZpfzlzAfoK8Q==
+    dependencies:
+      "@babel/runtime" "^7.16.3"
   
   "@mui/material@^5.2.3":
     version "5.2.3"

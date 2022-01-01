@@ -33,14 +33,14 @@ const PlaceToViistGallery = () => {
     <Container
       sx={{
         backgroundColor: "#192024",
-        height: "500px",
+        minHeight: "500px",
         width: "100%",
         padding: "80px 10px"
       }}
     >
       <h2 className={styleClass.header}>Top attractions</h2>
       <div className={styleClass.subHeader}>
-        This is some text inside of a div block.
+        Most visited places in navarvoor
       </div>
       <Box
         sx={{
@@ -49,20 +49,21 @@ const PlaceToViistGallery = () => {
         }}
       >
         <ImageList
-          sx={{ width: "100%", height: "300px" }}
+          sx={{ width: "100%", height: "300px", overflow: "hidden" }}
           cols={3}
-          rowHeight={164}
+          rowHeight={"164px"}
         >
           {getPlaceToVisitGallery().map((item) => (
             <ImageListItem key={item.img}>
               <img
                 style={{ height: "208px" }}
-                src={`${item.img}?w=248&fit=crop&auto=format`}
-                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                src={`${item.img}`}
+                srcSet={`${item.img}`}
                 alt={item.title}
                 loading="lazy"
               />
               <ImageListItemBar
+                sx={{ color: "#dddddd" }}
                 title={item.title}
                 subtitle={<span>{item.subTitle}</span>}
                 position="below"

@@ -60,7 +60,7 @@ const ActionSection = () => {
                   sx: {
                     width: "50%",
                     height: "50%",
-                    color: "#69b9ff"
+                    color: "#3399f3"
                   }
                 })}
                 {/* <h3 className={styleClass.item} sx={{ fontSize: "10px" }}>

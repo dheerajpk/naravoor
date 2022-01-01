@@ -28,7 +28,7 @@ export const getActionOptions = () => {
 export const getPlaceToVisitGallery = () => {
   return [
     {
-      img: "../p-natural.jpg",
+      img: "https://images.pexels.com/photos/5410778/pexels-photo-5410778.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=210&w=320",
       title: "Naravoor Para",
       subTitle: "Rock mining filled water"
     },
