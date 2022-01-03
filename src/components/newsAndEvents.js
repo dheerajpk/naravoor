@@ -92,7 +92,10 @@ const NewsAndEvents = () => {
   }
 
   return (
-    <Container sx={{ padding: "80px 10px", backgroundColor: "#dddddd" }}>
+    <Container
+      sx={{ padding: "80px 10px", backgroundColor: "#dddddd" }}
+      id="events"
+    >
       <h1 className={styleClass.header}>Upcoming Events</h1>
       <span className={styleClass.subHeader}>
         Latest announcements, news and events

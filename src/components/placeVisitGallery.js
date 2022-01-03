@@ -31,6 +31,7 @@ const PlaceToViistGallery = () => {
   const styleClass = useStyles();
   return (
     <Container
+      id="places"
       sx={{
         backgroundColor: "#192024",
         minHeight: "500px",

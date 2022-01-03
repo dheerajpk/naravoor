@@ -28,19 +28,19 @@ export const getActionOptions = () => {
 export const getPlaceToVisitGallery = () => {
   return [
     {
-      img: "https://images.pexels.com/photos/5410778/pexels-photo-5410778.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=210&w=320",
+      img: "../quarry.jpeg",
       title: "Naravoor Para",
-      subTitle: "Rock mining filled water"
+      subTitle: "Naravoor quarry"
     },
     {
-      img: "../p-temple.jpg",
-      title: "Vishnu Temple",
-      subTitle: "Naravoor MahaVishnu Temple"
+      img: "../mahavishnu.jpeg",
+      title: "Sri Mahavishnu Temple",
+      subTitle: "Sree Mahavishnu Temple, Naravoor"
     },
     {
-      img: "../p-farming.jpg",
-      title: "Farming",
-      subTitle: "Pepper farming"
+      img: "https://images.pexels.com/photos/1838545/pexels-photo-1838545.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      title: "Paddy field",
+      subTitle: "Naravoor paddy field"
     }
   ];
 };
@@ -87,7 +87,8 @@ export const getEvents = (type) => {
       type: "EVENT",
       date: new Date(),
       title: "Junior chess competion",
-      description: "Naravvor youth club conducting chess competion for juniors",
+      description:
+        "Naravoor youth club conducting chess competetion for juniors",
       contact: "+911234567890"
     },
     {
@@ -96,7 +97,7 @@ export const getEvents = (type) => {
       date: new Date(),
       title: "Junior drawing competion",
       description:
-        "Naravvor youth club conducting drawing competion for juniors",
+        "Naravoor youth club conducting drawing competetion for juniors",
       contact: "+911234567890"
     },
     {
@@ -104,7 +105,7 @@ export const getEvents = (type) => {
       type: "NEWS",
       date: new Date(),
       title: "Annual library meeting",
-      description: "Naravvor youth club conducting annual library meeting",
+      description: "Naravoor youth club conducting annual library meeting",
       contact: "+911234567890"
     },
     {
@@ -112,7 +113,7 @@ export const getEvents = (type) => {
       type: "NEWS",
       date: new Date(),
       title: "Naravoor school admission open",
-      description: "Naravoor LP school adimission soon starts",
+      description: "Naravoor LP school spot adimission",
       contact: "+911234567890"
     }
   ].filter((x) => x.type === type);

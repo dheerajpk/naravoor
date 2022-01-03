@@ -50,7 +50,7 @@ const MainBanner = () => {
     >
       <h1 className={styleClass.header}>Naravoor</h1>
       <span className={styleClass.subHeader}>
-        " The place of human in the rocks "
+        The place of man "Narante Ooru"
       </span>
     </Grid>
   );

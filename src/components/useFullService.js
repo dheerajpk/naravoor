@@ -59,7 +59,10 @@ const UseFullServices = () => {
   }
 
   return (
-    <Container sx={{ padding: "80px 10px", backgroundColor: "#fff" }}>
+    <Container
+      sx={{ padding: "80px 10px", backgroundColor: "#fff" }}
+      id="services"
+    >
       <h1 className={styleClass.header}>Services</h1>
       <span className={styleClass.subHeader}>
         Find all your services around you

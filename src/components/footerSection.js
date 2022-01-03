@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
-import { Paper, Grid, Container } from "@mui/material";
+import { Link, Grid, Container, Divider } from "@mui/material";
 
 const useStyles = makeStyles((theme) => ({
   h5: {
@@ -28,35 +28,30 @@ const useStyles = makeStyles((theme) => ({
 const FooterSection = () => {
   const styleClass = useStyles();
   return (
-    <Container sx={{ padding: "35px 0", backgroundColor: "#edeff2" }}>
+    <Container sx={{ padding: "35px 15px", backgroundColor: "#edeff2" }}>
       <Grid item xs={12}>
         <Grid container justifyContent="center" spacing={3}>
-          <Grid item xs={3}>
+          <Grid item xs={12} md={6}>
             <h5 className={styleClass.h5}>About Naravoor</h5>
             <p className={styleClass.p}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-              libero vitae erat.
+              The name Naravoor is derived from the Malayalam words Narante Ooru
+              ("place of man"). Naravoor, is a small village near Kuthuparamba
+              in the Kannur District of Kerala.
             </p>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} md={6} textAlign={"left"}>
             <h5 className={styleClass.h5}>Usefull links</h5>
-            <p className={styleClass.p}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-              libero vitae erat.
-            </p>
-          </Grid>
-          <Grid item xs={3}>
-            <h5 className={styleClass.h5}>Social</h5>
-            <p className={styleClass.p}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-              libero vitae erat.
-            </p>
+            <Link
+              sx={{ color: "#6a859c" }}
+              rel="noreferrer"
+              target="_blank"
+              href="https://www.naravoorsrimahavishnutemple.com/"
+              underline="none"
+              variant="body2"
+            >
+              Sri Mahavishnu Temple
+            </Link>
+            <Divider />
           </Grid>
         </Grid>
       </Grid>

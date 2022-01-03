@@ -34,6 +34,10 @@ const useStyles = makeStyles((theme) => ({
 
 const ActionSection = () => {
   const styleClass = useStyles();
+  function onActionClick(id) {
+    const elemnt = document.getElementById(id);
+    elemnt && elemnt.scrollIntoView({ behavior: "smooth" });
+  }
   return (
     <Container sx={{ paddingTop: "80px", paddingBottom: "80px" }}>
       <h2 className={styleClass.header}>getting around</h2>
@@ -50,9 +54,11 @@ const ActionSection = () => {
                 m: 1,
                 width: { lg: "200px", sm: "200px", xs: "calc(100vw / 3.4);" },
                 height: { lg: "250px", sm: "250px", xs: "200px" },
-                padding: "15px"
+                padding: "15px",
+                cursor: "pointer"
               }
             }}
+            onClick={() => onActionClick(x.id)}
           >
             <Paper elevation={3}>
               <div style={{ marginTop: "20px" }}>
@@ -63,9 +69,7 @@ const ActionSection = () => {
                     color: "#3399f3"
                   }
                 })}
-                {/* <h3 className={styleClass.item} sx={{ fontSize: "10px" }}>
-                  {x.name}
-                </h3> */}
+
                 <Typography
                   variant="h3"
                   component="h3"
